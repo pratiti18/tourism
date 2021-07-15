@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">               
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+    <h1>GALLERY....</h1></div>
+    <h2 class="mines"> <u> Starting off with the "JHARIA COAL MINES"..❯❯❯.</u></h2>
+    <div class="container">
+
+        <!-- images with number text -->
+        <div class="mySlides">
+          
+            <img src="jharia1.jpg" style="width:60%">
+        </div>
+      
+        <div class="mySlides">
+          
+            <img src="jharia2.jpg" style="width:60%">
+        </div>
+      
+        <div class="mySlides">
+          
+            <img src="jharia3.jpg" style="width:60%">
+        </div>
+      
+        <div class="mySlides">
+          
+            <img src="jharia4.jpg" style="width:60%">
+        </div>
+      
+        <div class="mySlides">
+          
+            <img src="jharia5.jpg" style="width:60%">
+        </div>
+      
+        
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="jharia1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Jharia mines smoke of coal fire">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="jharia2.jpg" style="width:100%" onclick="currentSlide(2)" alt="The historic fire">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="jharia3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mine Machinaries">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="jharia4.jpg" style="width:100%" onclick="currentSlide(4)" alt="The JCB Machine">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="jharia5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Men working">
+          </div>
+          
+        </div>
+      </div>
+      
+      <script>
+          var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length)
+   {slideIndex = 1}
+  if (n < 1)
+   {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) 
+  {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+      </script>
+      <h1 class="fall"> <u> Have a look and you'll "FALL" for the famous "BHATINDA WATERFALL"...❯❯❯</u></h1>
+
+<div class="bhatinda">
+
+    <!-- images with number text -->
+    <div class="mySlides1">
+      
+        <img src="bhatinda1.png" style="width:60%">
+    </div>
+  
+    <div class="mySlides1">
+      
+        <img src="bhatinda2.jpg" style="width:60%">
+    </div>
+  
+    <div class="mySlides1">
+     
+        <img src="bhatinda3.jpg" style="width:60%">
+    </div>
+  
+    <div class="mySlides1">
+     
+        <img src="bhatinda4.png" style="width:60%">
+    </div>
+  
+    
+  
+    
+  
+    <!-- Next and previous buttons -->
+    <a class="prev1" onclick="plusSlides1(-1)">&#10094;</a>
+    <a class="next1" onclick="plusSlides1(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container1">
+      <p id="caption1"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row1">
+      <div class="column1">
+        <img class="demo1 cursor1" src="bhatinda1.png" style="width:100%" onclick="currentSlide1(1)" alt="That calmness">
+      </div>
+      <div class="column1">
+        <img class="demo1 cursor1" src="bhatinda2.jpg" style="width:100%" onclick="currentSlide1(2)" alt="So serene">
+      </div>
+      <div class="column1">
+        <img class="demo1 cursor1" src="bhatinda3.jpg" style="width:100%" onclick="currentSlide1(3)" alt="Waterfalling falling through rocks">
+      </div>
+      <div class="column1">
+        <img class="demo1 cursor1" src="bhatinda4.png" style="width:100%" onclick="currentSlide1(4)" alt=" It's beautiful❤">
+      </div>
+      
+      
+    </div>
+  </div>
+  <script>
+    var slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+// Next/previous controls
+function plusSlides1(a) {
+showSlides1(slideIndex1 += a);
+}
+
+// Thumbnail image controls
+function currentSlide1(a) {
+showSlides1(slideIndex1 = a);
+}
+
+function showSlides1(a) {
+var x;
+var slides1 = document.getElementsByClassName("mySlides1");
+var dots1 = document.getElementsByClassName("demo1");
+var captionText1 = document.getElementById("caption1");
+if (a > slides1.length)
+{slideIndex1 = 1}
+if (a < 1)
+{slideIndex1 = slides1.length}
+for (x = 0; x < slides1.length; x++) 
+{
+slides1[x].style.display = "none";
+}
+for (x = 0; x < dots1.length; x++) {
+dots1[x].className = dots1[x].className.replace(" active1", "");
+}
+slides1[slideIndex1-1].style.display = "block";
+dots1[slideIndex1-1].className += " active1";
+captionText1.innerHTML = dots1[slideIndex1-1].alt;
+}
+
+</script>
+<h1 class="topheading"> <u>Allow me to give you a virtual tour of the "LAKE"</u> </h1>
+<div class="Topchanchi">
+
+  <!-- images with number text -->
+  <div class="mySlides2">
+    
+      <img src="topchanchi.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides2">
+    
+      <img src="topchanchi1.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides2">
+   
+      <img src="topchanchi2.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides2">
+   
+      <img src="topchanchi3.jpg" style="width:60%">
+  </div>
+  <div class="mySlides2">
+   
+    <img src="topchanchi4.jpg" style="width:60%">
+</div>
+
+  
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+  <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container2">
+    <p id="caption2"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row2">
+    <div class="column2">
+      <img class="demo2 cursor2" src="topchanchi.jpg" style="width:100%" onclick="currentSlide2(1)" alt="The migratory birds">
+    </div>
+    <div class="column2">
+      <img class="demo2 cursor2" src="topchanchi1.jpg" style="width:100%" onclick="currentSlide2(2)" alt="The lake and hills">
+    </div>
+    <div class="column2">
+      <img class="demo2 cursor2" src="topchanchi2.jpg" style="width:100%" onclick="currentSlide2(3)" alt="That serenity is what we humans crave">
+    </div>
+    <div class="column2">
+      <img class="demo2 cursor2" src="topchanchi3.jpg" style="width:100%" onclick="currentSlide2(4)" alt=" The infrastructure">
+    </div>
+    <div class="column2">
+      <img class="demo2 cursor2" src="topchanchi4.jpg" style="width:100%" onclick="currentSlide2(5)" alt=" It's beautiful❤">
+    </div>
+    
+    
+  </div>
+</div>
+<script>
+  var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+// Next/previous controls
+function plusSlides2(b) {
+showSlides2(slideIndex2 += b);
+}
+
+// Thumbnail image controls
+function currentSlide2(b) {
+showSlides2(slideIndex2 = b);
+}
+
+function showSlides2(b) {
+var y;
+var slides2 = document.getElementsByClassName("mySlides2");
+var dots2 = document.getElementsByClassName("demo2");
+var captionText2 = document.getElementById("caption2");
+if (b > slides2.length)
+{slideIndex2 = 1}
+if (b < 1)
+{slideIndex2 = slides2.length}
+for (y = 0; y < slides2.length; y++) 
+{
+slides2[y].style.display = "none";
+}
+for (y = 0; y < dots2.length; y++) {
+dots2[y].className = dots2[y].className.replace(" active2", "");
+}
+slides2[slideIndex2-1].style.display = "block";
+dots2[slideIndex2-1].className += " active2";
+captionText2.innerHTML = dots2[slideIndex2-1].alt;
+}
+
+</script>
+<h1 class="maithonheading"> <u>This "DAM" is "DAMN" good ....Come now have a look!! </u> </h1>
+<div class="Maithon">
+
+  <!-- images with number text -->
+  <div class="mySlides3">
+    
+      <img src="maithondam1.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides3">
+    
+      <img src="maithondam2.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides3">
+   
+      <img src="maithondam3.jpg" style="width:60%">
+  </div>
+
+  <div class="mySlides3">
+   
+      <img src="maithondam4.jpg" style="width:60%">
+  </div>
+  <div class="mySlides3">
+   
+    <img src="maithondam5.jpg" style="width:60%">
+</div>
+
+  
+
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+  <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container3">
+    <p id="caption3"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row3">
+    <div class="column3">
+      <img class="demo3 cursor3" src="maithondam1.jpg" style="width:100%" onclick="currentSlide3(1)" alt="Experience boating">
+    </div>
+    <div class="column3">
+      <img class="demo3 cursor3" src="maithondam2.jpg" style="width:100%" onclick="currentSlide3(2)" alt="The blue(ish)-green vibe">
+    </div>
+    <div class="column3">
+      <img class="demo3 cursor3" src="maithondam3.jpg" style="width:100%" onclick="currentSlide3(3)" alt="Traditional sailors">
+    </div>
+    <div class="column3">
+      <img class="demo3 cursor3" src="maithondam4.jpg" style="width:100%" onclick="currentSlide3(4)" alt=" Boats">
+    </div>
+    <div class="column3">
+      <img class="demo3 cursor3" src="maithondam5.jpg" style="width:100%" onclick="currentSlide3(5)" alt=" It's indeed pleasant">
+    </div>
+    
+    
+  </div>
+</div>
+<script>
+  var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+// Next/previous controls
+function plusSlides3(c) {
+showSlides3(slideIndex3 += c);
+}
+
+// Thumbnail image controls
+function currentSlide3(c) {
+showSlides3(slideIndex3 = c);
+}
+
+function showSlides3(c) {
+var z;
+var slides3 = document.getElementsByClassName("mySlides3");
+var dots3 = document.getElementsByClassName("demo3");
+var captionText3 = document.getElementById("caption3");
+if (c > slides3.length)
+{slideIndex3 = 1}
+if (c < 1)
+{slideIndex3 = slides3.length}
+for (z = 0; z < slides3.length; z++) 
+{
+slides3[z].style.display = "none";
+}
+for (z = 0; z< dots3.length; z++) {
+dots3[z].className = dots3[z].className.replace(" active3", "");
+}
+slides3[slideIndex3-1].style.display = "block";
+dots3[slideIndex3-1].className += " active3";
+captionText3.innerHTML = dots3[slideIndex3-1].alt;
+}
+
+</script>
+
+<br><br><br> <br>
+<div class="ending">
+<h1 class="galleryend">I am Pretty Sure...you already started planning your trip here ❤!!</h1>
+<h2 class="galleryend2">Well for that visit our <a href="Booking.html" target="_blank">BOOKING</a> section ..... </h2>
+<a class="home" href="Page1.html" target="_blank"> OR, go back to the Home Page >>></a></div>
+
+</body>
+</html>
